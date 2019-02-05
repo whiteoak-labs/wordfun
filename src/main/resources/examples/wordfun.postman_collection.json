@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "646f9ee1-3ba4-4655-be21-2537d5394726",
+		"name": "word-fun",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "wf-create-game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"name\": \"timothy\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "localhost:8080/game",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wf-list-games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/game/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wf-find-game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/game/97a1cdfb83734810863dde51b76961cd",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"97a1cdfb83734810863dde51b76961cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wf-player-move",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : \"0ce5f4c84aa4470dad143e26b5717646\",\n\t\"gameId\" : \"a5d0685baf77456ea2e9c1d5511a415c\",\n\t\"playerName\" : \"timothy\",\n\t\"letters\" : [\n\t\t{\n\t\t\t\"character\" : \"C\",\n\t\t\t\"value\" : 3\n\t\t},\n\t\t{\n\t\t\t\"character\" : \"A\",\n\t\t\t\"value\" : 1\n\t\t},\n\t\t{\n\t\t\t\"character\" : \"T\",\n\t\t\t\"value\" : 1\n\t\t}\n\t],\n\t\"x\" : 0,\n\t\"y\" : 2,\n\t\"direction\" : \"TOP_TO_BOTTOM\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/game",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
